@@ -6,6 +6,7 @@
 /* Neutral */
 --light-gray: hsl(204, 43%, 93%);
 --grayish-blue: hsl(218, 22%, 67%);
+--white: #ffffff;
 }
 
 * {
@@ -14,6 +15,23 @@
     box-sizing: border-box;
 }
 
-.body {
-    font-size: 16px;
+body {
+    background: var(--grayish-blue);
+}
+
+.container {
+    
+}
+
+.card-1 {
+    background: var(--white);
+}
+
+.card-2 {
+    background: var(--cyan);
+}
+
+.card-3 {
+    background: var(--cyan);
+    opacity: 0.8;
 }
