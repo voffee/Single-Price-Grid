@@ -20,18 +20,61 @@ body {
 }
 
 .container {
-    
+    font-family: 'Karla', sans-serif;
+    font-weight: 300;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
+/* General Card Styling */
+span {
+    opacity: 0.8;
+}
+
+/* Card 1 Styling */
 .card-1 {
     background: var(--white);
+    grid-column: 1 / span 2;
 }
 
+.card-1 h1 {
+    color: var(--cyan);
+}
+.card-1 h2 {
+    color: var(--bright-yellow);
+}
+
+.card-1 p {
+    color: var(--light-gray)
+}
+
+/* Card 2 Styling */
 .card-2 {
     background: var(--cyan);
 }
 
+.card-2 h2, p, a {
+    color: var(--white);
+}
+
+.btn {
+    background: var(--bright-yellow);
+    border: 1px solid black;
+    padding: 1px;
+    text-decoration: none;
+}
+
+/* Card 3 Styling */
 .card-3 {
     background: var(--cyan);
+    opacity: 0.75;
+}
+
+.card-3 h2, ul {
+    color: var(--white);
+}
+
+.card-3 ul li {
     opacity: 0.8;
 }
