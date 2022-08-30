@@ -1,12 +1,25 @@
 :root {
 /* Primary */
 --cyan: hsl(179, 62%, 43%);
+--java: #2FBAB8;
 --bright-yellow: hsl(71, 73%, 54%);
 
 /* Neutral */
 --light-gray: hsl(204, 43%, 93%);
 --grayish-blue: hsl(218, 22%, 67%);
 --white: #ffffff;
+}
+
+@media (max-width: 400px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    
+    .card-1 {
+        grid-column: auto;
+        grid-row: auto;
+    }
 }
 
 * {
@@ -36,39 +49,80 @@ span {
 .card-1 {
     background: var(--white);
     grid-column: 1 / span 2;
+    padding: 1rem 2rem;
 }
 
 .card-1 h1 {
     color: var(--cyan);
+    padding: 0.5rem;
+    font-size: 24px;
+    font-weight: 700;
 }
 .card-1 h2 {
     color: var(--bright-yellow);
+    padding: 0.5rem;
+    font-size: 16px;
 }
 
 .card-1 p {
-    color: var(--light-gray)
+    color: var(--grayish-blue);
+    padding: 0.5rem;
+    font-weight: 700;
+    opacity: 0.75;
+    text-align: justify;
 }
 
 /* Card 2 Styling */
 .card-2 {
     background: var(--cyan);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    justify-content: center;
 }
 
 .card-2 h2, p, a {
     color: var(--white);
+    padding: 5px;
 }
 
 .btn {
     background: var(--bright-yellow);
     border: 1px solid black;
-    padding: 1px;
+    padding: 13px 20px;
+    border: none;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px 1px #333;
     text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    width: 230px;
+}
+
+.larger-text {
+    font-size: 30px;
+    opacity: 1;
+}
+
+.card-2 :nth-child(3) {
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 /* Card 3 Styling */
 .card-3 {
-    background: var(--cyan);
-    opacity: 0.75;
+    background: var(--java);
+    padding: 1rem 2rem;
+}
+
+.card-3 h2 {
+    padding: 5px;
+}
+
+.card-3 ul {
+    margin-top: 3px;
 }
 
 .card-3 h2, ul {
@@ -77,4 +131,7 @@ span {
 
 .card-3 ul li {
     opacity: 0.8;
+    padding: 0.05rem;
+    list-style: none;
+    font-size: 16px;
 }
