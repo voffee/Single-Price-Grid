@@ -7,7 +7,19 @@
 /* Neutral */
 --light-gray: hsl(204, 43%, 93%);
 --grayish-blue: hsl(218, 22%, 67%);
+--page-color: #D3D3D3;
 --white: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }    
+    
+    .card-1 {
+        grid-column: auto;
+    }
 }
 
 * {
@@ -17,15 +29,21 @@
 }
 
 body {
-    background: var(--grayish-blue);
+    background: var(--page-color);
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
     font-family: 'Karla', sans-serif;
     font-weight: 300;
+    width: 50%;
+    justify-content: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    margin: 0 auto;
+    /* How the fuck does margin 0 auto work?! */
 }
 
 /* General Card Styling */
@@ -64,10 +82,6 @@ span {
 .card-2 {
     background: var(--cyan);
     padding: 1rem 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items:stretch;
-    justify-content: center;
 }
 
 .card-2 h2, p, a {
